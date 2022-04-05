@@ -28,6 +28,8 @@ import {
 
 //Imports
 import FirstScreen from './src/screens/FirstScreen';
+import LoginScreen from './src/screens/LoginScreen';
+import RegisterScreen from './src/screens/RegisterScreen';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -63,7 +65,7 @@ const App: () => Node = () => {
   };
 
   return (
-      <FirstScreen />
+      <RegisterScreen />
   );
 };
 
