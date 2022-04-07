@@ -35,14 +35,14 @@ import AndroidTextInputNativeComponent from 'react-native/Libraries/Components/T
             <Text style = {{fontSize : 20}}>
                 EMAIL: 
             </Text>
-            <TextInput placeholder='jane@example.com' style = {{height : 40, width : 350, borderWidth : 1, borderColor : "black", padding : 10, marginTop : 10, borderWidth : 2}}>
+            <TextInput placeholder='jane@example.com' style = {{height : 40, width : 350, borderWidth : 1, borderColor : "black", padding : 10, marginTop : 10, borderWidth : 2}} autoCapitalize = 'none'>
 
             </TextInput>
             
             <Text style = {{fontSize : 20, marginTop : 30}}>
                 PASSWORD: 
             </Text>
-            <TextInput placeholder='Enter Password' style = {{height : 40, width : 350, borderWidth : 1, borderColor : "black", padding : 10, marginTop : 10, borderWidth : 2}}>
+            <TextInput placeholder='Enter Password' style = {{height : 40, width : 350, borderWidth : 1, borderColor : "black", padding : 10, marginTop : 10, borderWidth : 2}} secureTextEntry = {'true'} autoCapitalize = 'none'>
 
             </TextInput>
 

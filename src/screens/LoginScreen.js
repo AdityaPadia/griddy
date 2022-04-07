@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
- import React from 'react';
+ import React, {useState} from 'react';
  import type {Node} from 'react';
  import {
    SafeAreaView,
@@ -20,9 +20,21 @@
    Keyboard
  } from 'react-native';
 import AndroidTextInputNativeComponent from 'react-native/Libraries/Components/TextInput/AndroidTextInputNativeComponent';
+import { NavigationContainer } from '@react-navigation/native';
 
  
- const LoginScreen: () => Node = () => {
+ const LoginScreen: () => Node = ({navigation}) => {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    function verify()
+    {
+        if (email == "aditya.padia0911@gmail.com" && password == "High right now")
+        {
+            console.log("Verification Passed")
+        }
+    }
  
    return (
      <View style = {styles.container} onPress = {() => Keyboard.dismiss()}>
@@ -35,18 +47,18 @@ import AndroidTextInputNativeComponent from 'react-native/Libraries/Components/T
             <Text style = {{fontSize : 20}}>
                 EMAIL: 
             </Text>
-            <TextInput placeholder='jane@example.com' style = {{height : 40, width : 350, borderWidth : 1, borderColor : "black", padding : 10, marginTop : 10, borderWidth : 2}}>
+            <TextInput placeholder='jane@example.com' style = {{height : 40, width : 350, borderWidth : 1, borderColor : "black", padding : 10, marginTop : 10, borderWidth : 2}} autoCapitalize = 'none' onChangeText={(text) => setEmail(text)}>
 
             </TextInput>
             
             <Text style = {{fontSize : 20, marginTop : 30}}>
                 PASSWORD: 
             </Text>
-            <TextInput placeholder='Enter Password' style = {{height : 40, width : 350, borderWidth : 1, borderColor : "black", padding : 10, marginTop : 10, borderWidth : 2}}>
+            <TextInput placeholder='Enter Password' style = {{height : 40, width : 350, borderWidth : 1, borderColor : "black", padding : 10, marginTop : 10, borderWidth : 2}} secureTextEntry = {true} autoCapitalize = 'none' onChangeText = {(text) => setPassword(text)}>
 
             </TextInput>
          </View>
-         <TouchableOpacity style = {{marginLeft : 20}}>
+         <TouchableOpacity style = {{marginLeft : 20}} onPress = {() => verify()}>
              <View style = {{height : 40, width : 350, alignItems : "center", justifyContent : "center", marginTop : 30, backgroundColor : "black", borderRadius : 5}}>
                     <Text style = {{color : "white", fontWeight : "bold"}}>
                         Sign in
