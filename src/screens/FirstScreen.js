@@ -19,7 +19,8 @@
  } from 'react-native';
 
  
- const FirstScreen: () => Node = () => {
+ const FirstScreen: () => Node = ({navigation}) => {
+   console.log(navigation);
  
    return (
      <View style = {styles.container}>
@@ -30,13 +31,13 @@
 
             <View style = {{flexDirection : 'row', alignItems : "center", height : 100}}>
 
-                <TouchableOpacity style = {{flex : 0.5,  borderColor : "black", borderWidth : 2, margin : 10, height : "50%", justifyContent : "center", marginLeft : 20, borderRadius : 5}}>
+                <TouchableOpacity onPress = {() => navigation.navigate("Login")} style = {{flex : 0.5,  borderColor : "black", borderWidth : 2, margin : 10, height : "50%", justifyContent : "center", marginLeft : 20, borderRadius : 5}}>
                         <Text style = {{alignSelf : "center"}}>
                             LOG IN
                         </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style = {{flex : 0.5,  borderColor : "black", borderWidth : 2, margin : 10, height : "50%", justifyContent : "center", marginRight : 20, borderRadius : 5, backgroundColor : "black"}}>
+                <TouchableOpacity onPress = {() => navigation.navigate("Registration")}style = {{flex : 0.5,  borderColor : "black", borderWidth : 2, margin : 10, height : "50%", justifyContent : "center", marginRight : 20, borderRadius : 5, backgroundColor : "black"}}>
                         <Text style = {{alignSelf : "center", color : "white"}}>
                             REGISTER
                         </Text>
