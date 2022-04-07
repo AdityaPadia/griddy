@@ -3,10 +3,10 @@ This project is for HackUST 2022 for the team BroCode. If you are reading this a
 
 ## Installation Instructions
 1. Clone the Repository
-2. `npm install`
-3. Switch to a new local branch using `git checkout -b <branch-name>`
-4. `cd ios`
-5. `pod install`
+2. Switch to a new local branch using `git checkout -b <branch-name>`
+3. `npm install`
+5. `cd ios`
+6. `pod install`
 
 ## Development Instructions
 Rohan you faggot, I need you to read this. Once you clone the repo. CHECKOUT TO A NEW LOCAL BRANCH
