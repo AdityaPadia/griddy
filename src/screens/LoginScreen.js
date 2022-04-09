@@ -32,7 +32,8 @@ import { NavigationContainer } from '@react-navigation/native';
     {
         if (email == "aditya.padia0911@gmail.com" && password == "High right now")
         {
-            console.log("Verification Passed")
+            console.log("Verification Passed");
+            navigation.navigate("Home");
         }
     }
  
