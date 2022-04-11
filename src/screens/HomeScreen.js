@@ -54,8 +54,56 @@
            Shop By Category
          </Text>
 
-         <View>
-           
+         <View style = {{flex : 0.2, flexDirection : "row"}} horizontal = {true}>
+           <ScrollView horizontal = {true}>
+            <TouchableOpacity style = {{width : 100, height : 100, backgroundColor : "#A5CEE4", margin : 10, borderRadius : 50, alignContent : "center", justifyContent : "center"}}>
+              <Image style = {{alignSelf : "center"}} source = {require("../../assets/dress.png")}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity style = {{width : 100, height : 100, backgroundColor : "#A5CEE4", margin : 10, borderRadius : 50, alignContent : "center", justifyContent : "center"}}>
+              <Image style = {{alignSelf : "center"}} source = {require("../../assets/pants.png")}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity style = {{width : 100, height : 100, backgroundColor : "#A5CEE4", margin : 10, borderRadius : 50, alignContent : "center", justifyContent : "center"}}>
+              <Image style = {{alignSelf : "center"}} source = {require("../../assets/shoes.png")}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity style = {{width : 100, height : 100, backgroundColor : "#A5CEE4", margin : 10, borderRadius : 50, alignContent : "center", justifyContent : "center"}}>
+              <Image style = {{alignSelf : "center"}} source = {require("../../assets/watch.png")}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity style = {{width : 100, height : 100, backgroundColor : "#A5CEE4", margin : 10, borderRadius : 50, alignContent : "center", justifyContent : "center"}}>
+              <Image style = {{alignSelf : "center"}} source = {require("../../assets/glasses.png")}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity style = {{width : 100, height : 100, backgroundColor : "#A5CEE4", margin : 10, borderRadius : 50, alignContent : "center", justifyContent : "center"}}>
+              <Image style = {{alignSelf : "center"}} source = {require("../../assets/necklace.png")}></Image>
+            </TouchableOpacity>
+            </ScrollView>
+         </View>
+
+         <View style = {{flex : 0.4, flexDirection : "row"}}>
+            <TouchableOpacity style = {{flex : 0.5, flexDirection : "column"}}>
+                <Image style = {{alignSelf : "center", margin : 5}} source = {require("../../assets/cargos.png")}>
+                </Image>
+                <Text style = {{fontSize : 20, alignSelf : "center", fontWeight : "bold"}}>
+                  Cargos
+                </Text>
+                <Text style = {{alignSelf : "center"}}>
+                  Plain or Patterned,
+                </Text>
+                <Text style = {{alignSelf : "center"}}>
+                  we love them
+                </Text>
+            </TouchableOpacity>
+            <TouchableOpacity style = {{flex : 0.5, flexDirection : "column"}}>
+                <Image style = {{alignSelf : "center", margin : 5}} source = {require("../../assets/vacayvibes.png")}>
+                </Image>
+                <Text style = {{fontSize : 20, alignSelf : "center", fontWeight : "bold"}}>
+                  Vacay Vibes
+                </Text>
+                <Text style = {{alignSelf : "center"}}>
+                  You know that's
+                </Text>
+                <Text style = {{alignSelf : "center"}}>
+                  bright
+                </Text>
+            </TouchableOpacity>
          </View>
        </View>
      </View>
