@@ -20,7 +20,6 @@
 
  
  const FirstScreen: () => Node = ({navigation}) => {
-   console.log(navigation);
  
    return (
      <View style = {styles.container}>
