@@ -22,7 +22,6 @@
 
  
  const HomeScreen: () => Node = ({navigation}) => {
-   console.log(navigation);
  
    return (
      <View style = {styles.container}>
@@ -35,15 +34,15 @@
             <Text style = {{fontSize : 24, fontWeight : "bold"}}>TRENDING THRIFTS</Text>
            </View>
 
-           <TouchableOpacity style = {{height : 200, width : 175, alignSelf : "flex-end", marginTop : -60, marginRight : 7}}>
-                <Image source = {require("../../assets/420.png")} style = {{height : 200, width : 175}}></Image>
+           <TouchableOpacity onPress = {() => navigation.navigate("Product")} style = {{height : 200, width : 175, alignSelf : "flex-end", marginTop : -60, marginRight : 7}}>
+                <Image source = {require("../../assets/solidTee.png")} style = {{height : 200, width : 175}}></Image>
            </TouchableOpacity>
 
-            <TouchableOpacity style = {{height : 35, alignContent : "center", flexDirection : "row"}}>
+            <TouchableOpacity onPress = {() => navigation.navigate("Product")} style = {{height : 35, alignContent : "center", flexDirection : "row"}}>
                 <Text style = {{fontSize : 23, paddingTop : 2, paddingLeft : 5}}>
-                  420 BOMBER JACKET (M) | 
+                  DAZY Lettuce Solid Tee (M) | 
                 </Text>
-                <View style = {{backgroundColor : "green", width : 82, height : 27, alignContent : "center", justifyContent : "center", alignSelf : "center", marginLeft : 20, padding : 2}}>
+                <View style = {{backgroundColor : "green", width : 70, height : 27, alignContent : "center", justifyContent : "center", alignSelf : "center", marginLeft : 20, padding : 2}}>
                     <Text style = {{fontSize : 23, alignSelf : "center"}}>
                       $45
                     </Text>
