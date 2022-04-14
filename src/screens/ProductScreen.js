@@ -16,7 +16,8 @@
    Text,
    View,
    Image,
-   Keyboard
+   Keyboard,
+   Alert
  } from 'react-native';
 
  import HomeHeader from '../components/HomeHeader';
@@ -27,6 +28,7 @@ import { setGestureState } from 'react-native-reanimated/lib/reanimated2/NativeM
  const ProductScreen: () => Node = ({navigation}) => {
     
     const [bid, setBid] = useState(0);
+    const [highestBid, setHighestBid] = useState(45)
 
     function add5(num)
     {
@@ -46,6 +48,18 @@ import { setGestureState } from 'react-native-reanimated/lib/reanimated2/NativeM
         parseInt(bid);
         setBid(bid - num);
         console.log(bid);
+    }
+
+    function placeBid(bid)
+    {
+        if (bid > highestBid)
+        {
+            setHighestBid(bid);
+        }
+        else
+        {
+            Alert.alert("Bid is lower than the current highest bid");
+        }
     }
  
    return (
@@ -88,7 +102,7 @@ import { setGestureState } from 'react-native-reanimated/lib/reanimated2/NativeM
          <View style = {{ flex : 0.2, flexDirection : "row"}}>
             <View style = {{flex : 0.7, flexDirection : "column"}}>
                 <Text style = {{fontSize : 18, margin : 5}}>
-                    Item Price
+                    Highest Bid
                 </Text>
                 <Text style = {{marginLeft : 5}}>
                     Final Price will be calculated at checkout
@@ -96,7 +110,7 @@ import { setGestureState } from 'react-native-reanimated/lib/reanimated2/NativeM
             </View>
             <View style = {{flex : 0.3, alignContent : "center", justifyContent : 'center'}}>
                 <Text style = {{fontSize : 18, alignSelf : "center", fontWeight : "bold"}}>
-                    HK$ 0.00
+                    HK$ {highestBid}
                 </Text>
             </View>
          </View>
@@ -124,7 +138,7 @@ import { setGestureState } from 'react-native-reanimated/lib/reanimated2/NativeM
                 Move to Wishlist
             </Text>
          </TouchableOpacity>
-         <TouchableOpacity style = {{alignContent : "center", justifyContent : "center",borderWidth : 1, flex : 0.15, backgroundColor : "#1E6325"}}>
+         <TouchableOpacity onPress = {() => placeBid(bid)}style = {{alignContent : "center", justifyContent : "center",borderWidth : 1, flex : 0.15, backgroundColor : "#1E6325"}}>
             <Text style = {{alignSelf : "center", color : "white", fontSize : 20, fontWeight : "bold"}}>
                 Place Bid
             </Text>
