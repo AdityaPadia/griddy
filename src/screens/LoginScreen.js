@@ -30,7 +30,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
     function verify()
     {
-        if (email == "aditya.padia0911@gmail.com" && password == "High right now")
+        if (email == "testuser@hackust.com" && password == "test1234")
         {
             console.log("Verification Passed");
             navigation.navigate("Home");
