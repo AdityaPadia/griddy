@@ -1,5 +1,5 @@
 # About
-This project is for HackUST 2022 for the team BroCode. Our project is an app that provides a platfrom for Thrift Stores in Hong Kong to allow bidding of their unique products, the person.
+Our project is an app that provides a platfrom for Thrift Stores in Hong Kong to allow bidding of their unique products, the person.
 Our Mission - To revolutionise and promote sustainable fashion in Hong Kong by offering a platform that connects thrift stores with potential customers.
 
 
